@@ -1,0 +1,36 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug",
+	"dir-cur-src" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest",
+	"dir-top-bld" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug",
+	"dir-top-src" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/home/matt/Desktop/Libraries/raylib-master/src",
+		"/home/matt/Desktop/Libraries/flecs-master/include"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/CMakeFiles/FlecTest.dir",
+	"sources" : 
+	{
+		"CMakeFiles/FlecTest.dir/BoxCollisionFunctions.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/BoxCollisionFunctions.cpp"
+		},
+		"CMakeFiles/FlecTest.dir/main.cpp.o" : 
+		{
+			"language" : "CXX",
+			"source" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/main.cpp"
+		}
+	}
+}

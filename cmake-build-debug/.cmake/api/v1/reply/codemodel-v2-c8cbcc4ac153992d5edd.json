@@ -1,0 +1,234 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "extern/raylib",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.raylib-Debug-83c6c83ade359a8131c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/home/matt/Desktop/Libraries/raylib-master"
+				},
+				{
+					"build" : "extern/raylib/raylib",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.raylib.raylib-Debug-c8a1ea22d2228abf3dbf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.25"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/home/matt/Desktop/Libraries/raylib-master/src",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "extern/raylib/raylib/external/glfw",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-extern.raylib.raylib.external.glfw-Debug-64d332f0c1fc5954aeb1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "/home/matt/Desktop/Libraries/raylib-master/src/external/glfw"
+				},
+				{
+					"build" : "extern/raylib/raylib/external/glfw/src",
+					"jsonFile" : "directory-extern.raylib.raylib.external.glfw.src-Debug-2fda733a877d472a9d47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "/home/matt/Desktop/Libraries/raylib-master/src/external/glfw/src",
+					"targetIndexes" : 
+					[
+						3,
+						5
+					]
+				},
+				{
+					"build" : "extern/flecs",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.flecs-Debug-22319a814b5a4afbf28c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "/home/matt/Desktop/Libraries/flecs-master",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FlecTest",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "raylib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "GLFW",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "flecs",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FlecTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FlecTest-Debug-830cb376f22bb3cee64b.json",
+					"name" : "FlecTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "flecs::@58a36686ab0b9e39e974",
+					"jsonFile" : "target-flecs-Debug-c8850f7616301e4d079b.json",
+					"name" : "flecs",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "flecs_static::@58a36686ab0b9e39e974",
+					"jsonFile" : "target-flecs_static-Debug-1bedb28613fac4631462.json",
+					"name" : "flecs_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glfw::@d488813490748e90c51d",
+					"jsonFile" : "target-glfw-Debug-b05cb6401dfb91338a52.json",
+					"name" : "glfw",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "raylib::@dad62ab1e3ff128c38ea",
+					"jsonFile" : "target-raylib-Debug-37f6955788c64e712f07.json",
+					"name" : "raylib",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "update_mappings::@d488813490748e90c51d",
+					"jsonFile" : "target-update_mappings-Debug-a51e4efb5aa6a211e045.json",
+					"name" : "update_mappings",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug",
+		"source" : "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
