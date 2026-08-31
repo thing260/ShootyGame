@@ -1,0 +1,109 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"/Users/matttuliszewski/Desktop/Libraries/flecs-master/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 88,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 95,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 101,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include",
+			"paths" : 
+			[
+				{
+					"from" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"extern/flecs/libflecs.dylib"
+			],
+			"targetId" : "flecs::@58a36686ab0b9e39e974",
+			"targetIndex" : 1,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"extern/flecs/libflecs_static.a"
+			],
+			"targetId" : "flecs_static::@58a36686ab0b9e39e974",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/flecs",
+			"exportName" : "flecs-export",
+			"exportTargets" : 
+			[
+				{
+					"id" : "flecs::@58a36686ab0b9e39e974",
+					"index" : 1
+				},
+				{
+					"id" : "flecs_static::@58a36686ab0b9e39e974",
+					"index" : 2
+				}
+			],
+			"paths" : 
+			[
+				"extern/flecs/CMakeFiles/Export/dd2a5a6f66f0d12b1be0feafeb08c769/flecs-config.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "extern/flecs",
+		"source" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master"
+	}
+}

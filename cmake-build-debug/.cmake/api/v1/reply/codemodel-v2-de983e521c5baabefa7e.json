@@ -1,0 +1,252 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "Threads::Threads::@ec3f10c2fe16df8f132b",
+					"jsonFile" : "target-Threads__Threads-Debug-6f10cf0e2f330a75d1f5.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 2
+				}
+			],
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						5
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-9ad1a58d4644cf6543fa.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "extern/raylib",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.raylib-Debug-c2a78b79d53049f2215a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/Users/matttuliszewski/Desktop/Libraries/raylib-master"
+				},
+				{
+					"build" : "extern/raylib/raylib",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.raylib.raylib-Debug-3192d5bcf9b913b295e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "/Users/matttuliszewski/Desktop/Libraries/raylib-master/src",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"build" : "extern/raylib/raylib/external/glfw",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-extern.raylib.raylib.external.glfw-Debug-0b036d2df296eb314140.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "/Users/matttuliszewski/Desktop/Libraries/raylib-master/src/external/glfw"
+				},
+				{
+					"build" : "extern/raylib/raylib/external/glfw/src",
+					"jsonFile" : "directory-extern.raylib.raylib.external.glfw.src-Debug-1a9552d45cec8754c245.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "/Users/matttuliszewski/Desktop/Libraries/raylib-master/src/external/glfw/src",
+					"targetIndexes" : 
+					[
+						3,
+						5
+					]
+				},
+				{
+					"build" : "extern/flecs",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-extern.flecs-Debug-b9f3dc2a69213edc2c8b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FlecTest",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "raylib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "GLFW",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						3,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "flecs",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FlecTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FlecTest-Debug-755ff587f873d2379bab.json",
+					"name" : "FlecTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "flecs::@58a36686ab0b9e39e974",
+					"jsonFile" : "target-flecs-Debug-51d5a01832a92b534ce7.json",
+					"name" : "flecs",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "flecs_static::@58a36686ab0b9e39e974",
+					"jsonFile" : "target-flecs_static-Debug-02b057231e155285e238.json",
+					"name" : "flecs_static",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glfw::@d488813490748e90c51d",
+					"jsonFile" : "target-glfw-Debug-6f36edcc2cd538481c1c.json",
+					"name" : "glfw",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "raylib::@dad62ab1e3ff128c38ea",
+					"jsonFile" : "target-raylib-Debug-e0b6a3224418e651c3dc.json",
+					"name" : "raylib",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "update_mappings::@d488813490748e90c51d",
+					"jsonFile" : "target-update_mappings-Debug-e37a6573db4461b5671d.json",
+					"name" : "update_mappings",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug",
+		"source" : "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	}
+}

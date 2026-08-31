@@ -1,0 +1,2519 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "extern/flecs/libflecs_static.a"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"add_flecs_target",
+			"install",
+			"target_compile_definitions",
+			"target_include_directories",
+			"set_target_properties",
+			"target_default_compile_options_c"
+		],
+		"files" : 
+		[
+			"/Users/matttuliszewski/Desktop/Libraries/flecs-master/CMakeLists.txt",
+			"/Users/matttuliszewski/Desktop/Libraries/flecs-master/cmake/target_default_compile_options.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 75,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 95,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 76,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 63,
+				"parent" : 1
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 43,
+				"parent" : 1
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 11,
+				"parent" : 6
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu99 -arch arm64 -fPIC -fvisibility=hidden -fcolor-diagnostics"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 4,
+					"define" : "flecs_STATIC"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 5,
+					"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					7
+				],
+				"standard" : "99"
+			},
+			"sourceIndexes" : 
+			[
+				135,
+				136,
+				137,
+				138,
+				139,
+				140,
+				141,
+				142,
+				143,
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197,
+				198,
+				199,
+				200,
+				201,
+				202,
+				203,
+				204,
+				205,
+				206,
+				207,
+				208,
+				209,
+				210,
+				211,
+				212,
+				213,
+				214,
+				215,
+				216,
+				217,
+				218,
+				219,
+				220,
+				221,
+				222,
+				223,
+				224,
+				225,
+				226,
+				227,
+				228,
+				229,
+				230,
+				231,
+				232,
+				233,
+				234,
+				235,
+				236,
+				237,
+				238,
+				239,
+				240,
+				241,
+				242,
+				243,
+				244,
+				245,
+				246,
+				247,
+				248,
+				249,
+				250,
+				251,
+				252,
+				253,
+				254,
+				255,
+				256,
+				257,
+				258,
+				259,
+				260,
+				261,
+				262,
+				263,
+				264,
+				265,
+				266,
+				267,
+				268,
+				269,
+				270,
+				271,
+				272,
+				273,
+				274,
+				275,
+				276,
+				277,
+				278,
+				279,
+				280,
+				281,
+				282,
+				283,
+				284,
+				285,
+				286,
+				287,
+				288
+			]
+		}
+	],
+	"id" : "flecs_static::@58a36686ab0b9e39e974",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 3,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"name" : "flecs_static",
+	"nameOnDisk" : "libflecs_static.a",
+	"paths" : 
+	{
+		"build" : "extern/flecs",
+		"source" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "include",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons",
+			"sourceIndexes" : 
+			[
+				1,
+				2,
+				3,
+				94,
+				95,
+				96,
+				97,
+				98,
+				99,
+				100,
+				101,
+				102,
+				103,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110,
+				111,
+				112,
+				113,
+				114,
+				115,
+				116
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp",
+			"sourceIndexes" : 
+			[
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				15,
+				16,
+				17,
+				78,
+				79,
+				80,
+				81,
+				93
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\impl",
+			"sourceIndexes" : 
+			[
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\alerts",
+			"sourceIndexes" : 
+			[
+				18,
+				19,
+				20,
+				21
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\app",
+			"sourceIndexes" : 
+			[
+				22,
+				23
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\component",
+			"sourceIndexes" : 
+			[
+				24
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\doc",
+			"sourceIndexes" : 
+			[
+				25,
+				26
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\entity",
+			"sourceIndexes" : 
+			[
+				27,
+				28
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\entity_ranges",
+			"sourceIndexes" : 
+			[
+				29
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\enum",
+			"sourceIndexes" : 
+			[
+				30
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\event",
+			"sourceIndexes" : 
+			[
+				31,
+				32,
+				33
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\frame",
+			"sourceIndexes" : 
+			[
+				34
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\id",
+			"sourceIndexes" : 
+			[
+				35,
+				36
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\json",
+			"sourceIndexes" : 
+			[
+				37
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\meta",
+			"sourceIndexes" : 
+			[
+				38,
+				39,
+				40,
+				41
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\metrics",
+			"sourceIndexes" : 
+			[
+				42,
+				43,
+				44
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\module",
+			"sourceIndexes" : 
+			[
+				45
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\observer",
+			"sourceIndexes" : 
+			[
+				46,
+				47,
+				48,
+				49
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\pipeline",
+			"sourceIndexes" : 
+			[
+				50,
+				51,
+				52,
+				53
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\prefab",
+			"sourceIndexes" : 
+			[
+				54
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\query",
+			"sourceIndexes" : 
+			[
+				55,
+				56,
+				57,
+				58,
+				59
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\rest",
+			"sourceIndexes" : 
+			[
+				60,
+				61
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\script",
+			"sourceIndexes" : 
+			[
+				62,
+				63,
+				64
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\stats",
+			"sourceIndexes" : 
+			[
+				65,
+				66
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\system",
+			"sourceIndexes" : 
+			[
+				67,
+				68,
+				69,
+				70
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\term",
+			"sourceIndexes" : 
+			[
+				71,
+				72,
+				73
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\timer",
+			"sourceIndexes" : 
+			[
+				74,
+				75
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\mixins\\units",
+			"sourceIndexes" : 
+			[
+				76,
+				77
+			]
+		},
+		{
+			"name" : "include\\flecs\\addons\\cpp\\utils",
+			"sourceIndexes" : 
+			[
+				82,
+				83,
+				84,
+				85,
+				86,
+				87,
+				88,
+				89,
+				90,
+				91,
+				92
+			]
+		},
+		{
+			"name" : "include\\flecs",
+			"sourceIndexes" : 
+			[
+				117,
+				127
+			]
+		},
+		{
+			"name" : "include\\flecs\\datastructures",
+			"sourceIndexes" : 
+			[
+				118,
+				119,
+				120,
+				121,
+				122,
+				123,
+				124,
+				125,
+				126
+			]
+		},
+		{
+			"name" : "include\\flecs\\private",
+			"sourceIndexes" : 
+			[
+				128,
+				129,
+				130,
+				131,
+				132,
+				133,
+				134
+			]
+		},
+		{
+			"name" : "src\\addons",
+			"sourceIndexes" : 
+			[
+				135,
+				136,
+				138,
+				139,
+				140,
+				141,
+				143,
+				157,
+				174,
+				175,
+				176,
+				186,
+				224,
+				225
+			]
+		},
+		{
+			"name" : "src\\addons\\constraint_traits",
+			"sourceIndexes" : 
+			[
+				137
+			]
+		},
+		{
+			"name" : "src\\addons\\http",
+			"sourceIndexes" : 
+			[
+				142
+			]
+		},
+		{
+			"name" : "src\\addons\\json",
+			"sourceIndexes" : 
+			[
+				144,
+				145,
+				146,
+				147,
+				148,
+				149,
+				150,
+				151,
+				152,
+				153,
+				154,
+				155,
+				156
+			]
+		},
+		{
+			"name" : "src\\addons\\meta",
+			"sourceIndexes" : 
+			[
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				173
+			]
+		},
+		{
+			"name" : "src\\addons\\meta\\type_support",
+			"sourceIndexes" : 
+			[
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172
+			]
+		},
+		{
+			"name" : "src\\addons\\os_api_impl",
+			"sourceIndexes" : 
+			[
+				177
+			]
+		},
+		{
+			"name" : "src\\addons\\parser",
+			"sourceIndexes" : 
+			[
+				178,
+				179
+			]
+		},
+		{
+			"name" : "src\\addons\\pipeline",
+			"sourceIndexes" : 
+			[
+				180,
+				181
+			]
+		},
+		{
+			"name" : "src\\addons\\prefab",
+			"sourceIndexes" : 
+			[
+				182,
+				183,
+				184
+			]
+		},
+		{
+			"name" : "src\\addons\\query_dsl",
+			"sourceIndexes" : 
+			[
+				185
+			]
+		},
+		{
+			"name" : "src\\addons\\script",
+			"sourceIndexes" : 
+			[
+				187,
+				188,
+				200,
+				201,
+				202,
+				203,
+				204,
+				205,
+				206,
+				207,
+				208,
+				209,
+				210,
+				211,
+				212,
+				213,
+				214,
+				215
+			]
+		},
+		{
+			"name" : "src\\addons\\script\\expr",
+			"sourceIndexes" : 
+			[
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197,
+				198,
+				199
+			]
+		},
+		{
+			"name" : "src\\addons\\stats",
+			"sourceIndexes" : 
+			[
+				216,
+				217,
+				218,
+				219,
+				220,
+				221,
+				222
+			]
+		},
+		{
+			"name" : "src\\addons\\system",
+			"sourceIndexes" : 
+			[
+				223
+			]
+		},
+		{
+			"name" : "src",
+			"sourceIndexes" : 
+			[
+				226,
+				227,
+				228,
+				240,
+				241,
+				242,
+				243,
+				244,
+				245,
+				246,
+				247,
+				248,
+				249,
+				250,
+				276,
+				277,
+				278,
+				287,
+				288
+			]
+		},
+		{
+			"name" : "src\\datastructures",
+			"sourceIndexes" : 
+			[
+				229,
+				230,
+				231,
+				232,
+				233,
+				234,
+				235,
+				236,
+				237,
+				238,
+				239
+			]
+		},
+		{
+			"name" : "src\\query",
+			"sourceIndexes" : 
+			[
+				251,
+				274,
+				275
+			]
+		},
+		{
+			"name" : "src\\query\\cache",
+			"sourceIndexes" : 
+			[
+				252,
+				253,
+				254,
+				255,
+				256,
+				257
+			]
+		},
+		{
+			"name" : "src\\query\\compiler",
+			"sourceIndexes" : 
+			[
+				258,
+				259
+			]
+		},
+		{
+			"name" : "src\\query\\engine",
+			"sourceIndexes" : 
+			[
+				260,
+				261,
+				262,
+				263,
+				264,
+				265,
+				266,
+				267,
+				268,
+				269,
+				270,
+				271,
+				272,
+				273
+			]
+		},
+		{
+			"name" : "src\\storage",
+			"sourceIndexes" : 
+			[
+				279,
+				280,
+				281,
+				282,
+				283,
+				284,
+				285,
+				286
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/alerts.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/app.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/constraint_traits.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/c_types.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/component.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/delegate.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/entity.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/entity_component_tuple.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/entity_view.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/field.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/flecs.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/impl/field.hpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/impl/iter.hpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/impl/world.hpp",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/iter.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/lifecycle_traits.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/log.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/alerts/builder.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/alerts/builder_i.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/alerts/decl.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/alerts/impl.hpp",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/app/builder.hpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/app/decl.hpp",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/component/impl.hpp",
+			"sourceGroupIndex" : 6
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/doc/decl.hpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/doc/impl.hpp",
+			"sourceGroupIndex" : 7
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/entity/builder.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/entity/impl.hpp",
+			"sourceGroupIndex" : 8
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/entity_ranges/impl.hpp",
+			"sourceGroupIndex" : 9
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/enum/impl.hpp",
+			"sourceGroupIndex" : 10
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/event/builder.hpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/event/decl.hpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/event/impl.hpp",
+			"sourceGroupIndex" : 11
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/frame/impl.hpp",
+			"sourceGroupIndex" : 12
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/id/decl.hpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/id/impl.hpp",
+			"sourceGroupIndex" : 13
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/json/decl.hpp",
+			"sourceGroupIndex" : 14
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/meta/cursor.hpp",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/meta/decl.hpp",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/meta/impl.hpp",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/meta/opaque.hpp",
+			"sourceGroupIndex" : 15
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/metrics/builder.hpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/metrics/decl.hpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/metrics/impl.hpp",
+			"sourceGroupIndex" : 16
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/module/impl.hpp",
+			"sourceGroupIndex" : 17
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/observer/builder.hpp",
+			"sourceGroupIndex" : 18
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/observer/builder_i.hpp",
+			"sourceGroupIndex" : 18
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/observer/decl.hpp",
+			"sourceGroupIndex" : 18
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/observer/impl.hpp",
+			"sourceGroupIndex" : 18
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/pipeline/builder.hpp",
+			"sourceGroupIndex" : 19
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/pipeline/builder_i.hpp",
+			"sourceGroupIndex" : 19
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/pipeline/decl.hpp",
+			"sourceGroupIndex" : 19
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/pipeline/impl.hpp",
+			"sourceGroupIndex" : 19
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/prefab/impl.hpp",
+			"sourceGroupIndex" : 20
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/query/builder.hpp",
+			"sourceGroupIndex" : 21
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/query/builder_i.hpp",
+			"sourceGroupIndex" : 21
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/query/decl.hpp",
+			"sourceGroupIndex" : 21
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/query/impl.hpp",
+			"sourceGroupIndex" : 21
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/query/sparse_query.hpp",
+			"sourceGroupIndex" : 21
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/rest/decl.hpp",
+			"sourceGroupIndex" : 22
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/rest/impl.hpp",
+			"sourceGroupIndex" : 22
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/script/builder.hpp",
+			"sourceGroupIndex" : 23
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/script/decl.hpp",
+			"sourceGroupIndex" : 23
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/script/impl.hpp",
+			"sourceGroupIndex" : 23
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/stats/decl.hpp",
+			"sourceGroupIndex" : 24
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/stats/impl.hpp",
+			"sourceGroupIndex" : 24
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/system/builder.hpp",
+			"sourceGroupIndex" : 25
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/system/builder_i.hpp",
+			"sourceGroupIndex" : 25
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/system/decl.hpp",
+			"sourceGroupIndex" : 25
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/system/impl.hpp",
+			"sourceGroupIndex" : 25
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/term/builder_i.hpp",
+			"sourceGroupIndex" : 26
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/term/decl.hpp",
+			"sourceGroupIndex" : 26
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/term/impl.hpp",
+			"sourceGroupIndex" : 26
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/timer/decl.hpp",
+			"sourceGroupIndex" : 27
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/timer/impl.hpp",
+			"sourceGroupIndex" : 27
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/units/decl.hpp",
+			"sourceGroupIndex" : 28
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/mixins/units/impl.hpp",
+			"sourceGroupIndex" : 28
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/pair.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/ref.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/table.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/type.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/array.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/builder.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/enum.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/function_traits.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/iterable.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/map.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/node_builder.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/signature.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/string.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/stringstream.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/utils/utils.hpp",
+			"sourceGroupIndex" : 29
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/cpp/world.hpp",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/deprecated.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/doc.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/entity_ranges.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/flecs_c.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/flecs_cpp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/frame.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/http.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/json.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/log.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/meta.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/meta_c.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/metrics.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/module.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/os_api_impl.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/pipeline.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/rest.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/script.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/script_math.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/script_platform.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/stats.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/system.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/timer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/addons/units.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/bake_config.h",
+			"sourceGroupIndex" : 30
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/allocator.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/bitset.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/block_allocator.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/hashmap.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/map.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/sparse.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/stack_allocator.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/strbuf.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/datastructures/vec.h",
+			"sourceGroupIndex" : 31
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/os_api.h",
+			"sourceGroupIndex" : 30
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/private/addon_defines.h",
+			"sourceGroupIndex" : 32
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/private/addons.h",
+			"sourceGroupIndex" : 32
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/private/api_defines.h",
+			"sourceGroupIndex" : 32
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/private/api_flags.h",
+			"sourceGroupIndex" : 32
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/private/api_internals.h",
+			"sourceGroupIndex" : 32
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/private/api_support.h",
+			"sourceGroupIndex" : 32
+		},
+		{
+			"backtrace" : 2,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/include/flecs/private/api_types.h",
+			"sourceGroupIndex" : 32
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/alerts.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/app.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/constraint_traits/constraint_traits.c",
+			"sourceGroupIndex" : 34
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/doc.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/entity_ranges.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/flecs_cpp.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/frame.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/http/http.c",
+			"sourceGroupIndex" : 35
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/journal.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/deserialize.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/deserialize_value.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/json.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_entity.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_field_info.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_iter.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_iter_result.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_iter_result_query.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_iter_result_table.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_query_info.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_type_info.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_value.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/json/serialize_world.c",
+			"sourceGroupIndex" : 36
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/log.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/c_utils.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/cursor.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/definitions.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/meta.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/meta_utils.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/ptr.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/rtt_lifecycle.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/serializer.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/type_support/array_ts.c",
+			"sourceGroupIndex" : 38
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/type_support/enum_ts.c",
+			"sourceGroupIndex" : 38
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/type_support/map_ts.c",
+			"sourceGroupIndex" : 38
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/type_support/opaque_ts.c",
+			"sourceGroupIndex" : 38
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/type_support/primitive_ts.c",
+			"sourceGroupIndex" : 38
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/type_support/struct_ts.c",
+			"sourceGroupIndex" : 38
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/type_support/units_ts.c",
+			"sourceGroupIndex" : 38
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/meta/value.c",
+			"sourceGroupIndex" : 37
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/metrics.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/module.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/multi_world.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/os_api_impl/os_api_impl.c",
+			"sourceGroupIndex" : 39
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/parser/strutils.c",
+			"sourceGroupIndex" : 40
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/parser/tokenizer.c",
+			"sourceGroupIndex" : 40
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/pipeline/pipeline.c",
+			"sourceGroupIndex" : 41
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/pipeline/worker.c",
+			"sourceGroupIndex" : 41
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/prefab/instantiate.c",
+			"sourceGroupIndex" : 42
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/prefab/prefab.c",
+			"sourceGroupIndex" : 42
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/prefab/tree_spawner.c",
+			"sourceGroupIndex" : 42
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/query_dsl/parser.c",
+			"sourceGroupIndex" : 43
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/rest.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/ast.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/enum_visitor.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/ast.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/format.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/parser.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/stack.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/util.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/visit_eval.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/visit_fold.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/visit_free.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/visit_refs.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/visit_to_str.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/expr/visit_type.c",
+			"sourceGroupIndex" : 45
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/function.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/functions_builtin.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/functions_math.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/functions_math_perlin.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/parser.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/platform.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/script.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/serialize.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/struct_visitor.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/template.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/vars.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/visit.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/visit_check.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/visit_eval.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/visit_free.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/script/visit_to_str.c",
+			"sourceGroupIndex" : 44
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/stats/memory.c",
+			"sourceGroupIndex" : 46
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/stats/monitor.c",
+			"sourceGroupIndex" : 46
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/stats/pipeline_monitor.c",
+			"sourceGroupIndex" : 46
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/stats/stats.c",
+			"sourceGroupIndex" : 46
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/stats/system_monitor.c",
+			"sourceGroupIndex" : 46
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/stats/world_monitor.c",
+			"sourceGroupIndex" : 46
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/stats/world_summary.c",
+			"sourceGroupIndex" : 46
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/system/system.c",
+			"sourceGroupIndex" : 47
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/timer.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/addons/units.c",
+			"sourceGroupIndex" : 33
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/bootstrap.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/commands.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/component_actions.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/allocator.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/bitset.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/block_allocator.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/hash.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/hashmap.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/map.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/name_index.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/sparse.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/stack_allocator.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/strbuf.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/datastructures/vec.c",
+			"sourceGroupIndex" : 49
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/each.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/entity.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/entity_name.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/id.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/iter.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/misc.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/observable.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/observer.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/on_delete.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/os_api.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/poly.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/api.c",
+			"sourceGroupIndex" : 50
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/cache/cache.c",
+			"sourceGroupIndex" : 51
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/cache/cache_iter.c",
+			"sourceGroupIndex" : 51
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/cache/change_detection.c",
+			"sourceGroupIndex" : 51
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/cache/group.c",
+			"sourceGroupIndex" : 51
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/cache/match.c",
+			"sourceGroupIndex" : 51
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/cache/order_by.c",
+			"sourceGroupIndex" : 51
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/compiler/compiler.c",
+			"sourceGroupIndex" : 52
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/compiler/compiler_term.c",
+			"sourceGroupIndex" : 52
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_iter.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_member.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_pred.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_sparse.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_toggle.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_trav.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_tree.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_up.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/eval_utils.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/trav_cache.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/trav_down_cache.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/trav_up_cache.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/engine/trivial_iter.c",
+			"sourceGroupIndex" : 53
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/util.c",
+			"sourceGroupIndex" : 50
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/query/validator.c",
+			"sourceGroupIndex" : 50
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/ref.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/search.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/stage.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/component_index.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/entity_index.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/non_fragmenting_childof.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/ordered_children.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/sparse_storage.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/table.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/table_cache.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/storage/table_graph.c",
+			"sourceGroupIndex" : 54
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/type_info.c",
+			"sourceGroupIndex" : 48
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "/Users/matttuliszewski/Desktop/Libraries/flecs-master/src/world.c",
+			"sourceGroupIndex" : 48
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

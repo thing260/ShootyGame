@@ -1,16 +1,4 @@
-/home/matt/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/matt/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja -S /home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest -B /home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug
--- The C compiler identification is GNU 16.2.1
--- The CXX compiler identification is GNU 16.2.1
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/gcc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/g++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/matttuliszewski/Desktop/Code/Projects/ShootyGame -B /Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug
 -- Performing Test COMPILER_HAS_THOSE_TOGGLES
 -- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
 -- Testing if -Werror=pointer-arith can be used -- compiles
@@ -20,18 +8,17 @@
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
 -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
 -- Found Threads: TRUE
--- Including X11 support
--- Found X11: /usr/include
--- Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so
--- Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so - found
--- Looking for gethostbyname
--- Looking for gethostbyname - found
--- Looking for connect
--- Looking for connect - found
--- Looking for remove
--- Looking for remove - found
--- Looking for shmat
--- Looking for shmat - found
+-- Including Cocoa support
+-- The OBJC compiler identification is AppleClang 17.0.0.17000013
+-- Detecting OBJC compiler ABI info
+-- Detecting OBJC compiler ABI info - done
+-- Check for working OBJC compiler: /usr/bin/clang - skipped
+CMake Warning (dev) at /Users/matttuliszewski/Desktop/Libraries/raylib-master/cmake/LibraryConfigurations.cmake:48 (MESSAGE):
+  OpenGL is deprecated starting with macOS 10.14 (Mojave)!
+Call Stack (most recent call first):
+  /Users/matttuliszewski/Desktop/Libraries/raylib-master/src/CMakeLists.txt:57 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
 -- Audio Backend: miniaudio
 -- Building raylib static library
 -- Generated build type: Debug
@@ -39,6 +26,6 @@
 --   PLATFORM=PLATFORM_DESKTOP
 --   GRAPHICS=GRAPHICS_API_OPENGL_33
 -- Targets: flecs;flecs_static
--- Configuring done (0.8s)
--- Generating done (0.0s)
--- Build files have been written to: /home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug
+-- Configuring done (0.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug

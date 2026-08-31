@@ -123,7 +123,7 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
     }
 
     //Test 2
-    float ClosestTime = max(Xnear,Ynear);
+    float ClosestTime = fmax(Xnear,Ynear);
     if (ClosestTime > TimeToHit || ClosestTime < 0) {
         return CollisionData {false,INFINITY,-1};
     }

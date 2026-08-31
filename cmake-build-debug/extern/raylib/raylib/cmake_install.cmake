@@ -1,4 +1,4 @@
-# Install script for directory: /home/matt/Desktop/Libraries/raylib-master/src
+# Install script for directory: /Users/matttuliszewski/Desktop/Libraries/raylib-master/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -27,11 +27,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "0")
-endif()
-
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
@@ -44,47 +39,51 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/external/glfw/cmake_install.cmake")
+  include("/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/external/glfw/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64" TYPE STATIC_LIBRARY FILES "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/libraylib.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/libraylib.a")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libraylib.a" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libraylib.a")
+    execute_process(COMMAND "/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libraylib.a")
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/home/matt/Desktop/Libraries/raylib-master/src/raylib.h"
-    "/home/matt/Desktop/Libraries/raylib-master/src/rcamera.h"
-    "/home/matt/Desktop/Libraries/raylib-master/src/rlgl.h"
-    "/home/matt/Desktop/Libraries/raylib-master/src/raymath.h"
+    "/Users/matttuliszewski/Desktop/Libraries/raylib-master/src/raylib.h"
+    "/Users/matttuliszewski/Desktop/Libraries/raylib-master/src/rcamera.h"
+    "/Users/matttuliszewski/Desktop/Libraries/raylib-master/src/rlgl.h"
+    "/Users/matttuliszewski/Desktop/Libraries/raylib-master/src/raymath.h"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/raylib.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/raylib.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib" TYPE FILE FILES "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/raylib-config-version.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib" TYPE FILE FILES "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/raylib-config-version.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib" TYPE FILE FILES
-    "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/raylib-config-version.cmake"
-    "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/raylib-config.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib" TYPE FILE FILES
+    "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/raylib-config-version.cmake"
+    "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/raylib-config.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib/raylib-targets.cmake")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib/raylib-targets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
-         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib/raylib-targets.cmake"
-         "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/CMakeFiles/Export/242053f21705361cae06cecf1a5dc4f4/raylib-targets.cmake")
+         "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib/raylib-targets.cmake"
+         "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/CMakeFiles/Export/3f9a69e8808e76b29b64bee1688b3b35/raylib-targets.cmake")
     if(_cmake_export_file_changed)
-      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib/raylib-targets-*.cmake")
+      file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib/raylib-targets-*.cmake")
       if(_cmake_old_config_files)
         string(REPLACE ";" ", " _cmake_old_config_files_text "${_cmake_old_config_files}")
-        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib/raylib-targets.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
+        message(STATUS "Old export file \"$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib/raylib-targets.cmake\" will be replaced.  Removing files [${_cmake_old_config_files_text}].")
         unset(_cmake_old_config_files_text)
         file(REMOVE ${_cmake_old_config_files})
       endif()
@@ -92,15 +91,15 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib" TYPE FILE FILES "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/CMakeFiles/Export/242053f21705361cae06cecf1a5dc4f4/raylib-targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib" TYPE FILE FILES "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/CMakeFiles/Export/3f9a69e8808e76b29b64bee1688b3b35/raylib-targets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/raylib" TYPE FILE FILES "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/CMakeFiles/Export/242053f21705361cae06cecf1a5dc4f4/raylib-targets-debug.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/raylib" TYPE FILE FILES "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/CMakeFiles/Export/3f9a69e8808e76b29b64bee1688b3b35/raylib-targets-debug.cmake")
   endif()
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/matt/Desktop/CodeforcesOrProjects/Projects/FlecTest/cmake-build-debug/extern/raylib/raylib/install_local_manifest.txt"
+  file(WRITE "/Users/matttuliszewski/Desktop/Code/Projects/ShootyGame/cmake-build-debug/extern/raylib/raylib/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
