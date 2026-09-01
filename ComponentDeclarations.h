@@ -33,7 +33,8 @@ struct Dynamic { //This Object is Moving and Processed in Collision as such
 };
 struct Static { //This Object is Not Moving and Processed in Collision as such
 };
-struct Player { //This Object is Controlled By the Player, Could Theoretically have more
+struct Player { //This Object is Controlled By the Player, Used to be a Tag, now as jump for jumping
+    bool Jump = false;
 };
 struct CameraFocus { //This Object is the Focus Of the Camera (Only one allowed or weird shit happens)
 };

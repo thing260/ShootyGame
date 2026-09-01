@@ -70,8 +70,6 @@ int main() {
    D.set<Box>(Box {Vector2{100,100},&bubbles});
    D.add<Dynamic>();
 
-
-
    entity C = MyWorld.entity();
    C.set<Position>({100,400});
    C.set<Box>(Box {Vector2{800,100},&bubbles});
@@ -91,6 +89,7 @@ int main() {
    flecs::query<Position,Static,Box> StaticBoxs = MyWorld.query<Position,Static,Box>();
    flecs::query<Velocity,Position,Dynamic,Box> DynamicBoxs = MyWorld.query<Velocity,Position,Dynamic,Box>();
    flecs::query<Position,Box,CameraFocus> CamerasFocus = MyWorld.query<Position,Box,CameraFocus>();
+   flecs::query<Player> Players = MyWorld.query<Player>();
 
    flecs::query<Velocity*,Position,Box,Dynamic*,Static*> StaticAndDynamicBoxs = MyWorld.query_builder<Velocity*,Position,Box,Dynamic*,Static*>()
    .with<Velocity>().optional()
@@ -108,21 +107,25 @@ int main() {
       //Controls / Velocity get set from other things
       if (IsKeyDown(KEY_Z)) {
          camera.zoom += 0.05f;
-      }
+      } // Zoom in
       if (IsKeyDown(KEY_X)) {
          camera.zoom -= 0.05f;
-      }
+      } // Zoom out
       Controlling.each([](Velocity &velocity, Player player) {
-         if (IsKeyDown(KEY_A)) {velocity.X -= 16;}
-         if (IsKeyDown(KEY_W)) {velocity.Y -= 16;}
-         if (IsKeyDown(KEY_S)) {velocity.Y += 16;}
-         if (IsKeyDown(KEY_D)) {velocity.X += 16;}
+         if (IsKeyDown(KEY_LEFT)) {velocity.X -= 16;}
+         if (IsKeyDown(KEY_UP)) {velocity.Y -= 4;}
+         if (IsKeyDown(KEY_DOWN)) {velocity.Y += 4;}
+         if (IsKeyDown(KEY_RIGHT)) {velocity.X += 16;}
+         if (player.Jump == true && IsKeyDown(KEY_SPACE)) {velocity.Y -= 400;}
+      }); //Controls
+      Players.each([](Player &player) {
+         player.Jump = false;
       });
-      Moving.each([]( Position &Pos, Velocity &Vel) {
+      Moving.each([]( Position &Pos, Velocity &Vel) { // Gravity
          Vel.Y += 8;
-      });
+      }); // Gravity
 
-      // Got a sneaking feeling their might be an error due to the captures and the data staying the same, be on the lookout
+      //Collision // Movement
       float TimeLeft = DELTATIME;
       while (TimeLeft > 0) {
          CollisionData Earliest {false,INFINITY,-1};
@@ -189,7 +192,7 @@ int main() {
                      }
                   );
                }
-               else if (HitType == 0) {
+               else if (HitType == 0) { //Hit From Y
                   OuterEntity.set<Velocity>( Velocity {
                      Friction(OuterEntity.get<Velocity>().X,FRICTION),
                      (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterEntity.get<Velocity>().Y + ((2*Mass2)/(Mass1 + Mass2))*InnerEntity.get<Velocity>().Y)/2
@@ -214,7 +217,7 @@ int main() {
                   );
                }
             }
-            else { // One both will give the other friction, and stop it on a axis
+            else { // One will give the other friction, and stop it on a axis
                if (HitType == 0) {
                   InnerEntity.set<Velocity>({Friction(InnerEntity.get<Velocity>().X,FRICTION),0});
                }
@@ -225,7 +228,9 @@ int main() {
                   InnerEntity.set<Velocity>({0,0});
                }
             }
-
+            if (Earliest.AngleHit == 90 && InnerEntity.has<Player>()) {
+               InnerEntity.set<Player>(Player{true});
+            }
 
          }
          else {
