@@ -113,8 +113,10 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
     // Swap Values incase ray comes from a different angle, also decides Angle
     bool Yswap = false;
     bool Xswap = false;
-    if (Xnear > Xfar) {ranges::swap(Xnear, Xfar);}
-    if (Ynear > Yfar) {ranges::swap(Ynear, Yfar);}
+    if (Xnear > Xfar) {ranges::swap(Xnear, Xfar);
+        Xswap = true;}
+    if (Ynear > Yfar) {ranges::swap(Ynear, Yfar);
+        Yswap = true;}
 
 
     //Test 1

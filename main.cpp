@@ -75,6 +75,11 @@ int main() {
    C.set<Box>(Box {Vector2{800,100},&bubbles});
    C.add<Static>();
 
+   entity E = MyWorld.entity();
+   E.set<Position>({-100,100});
+   E.set<Box>(Box {Vector2{400,100},&bubbles});
+   E.add<Static>();
+
 
    // Cam needs to be attached to object
    Camera2D camera;
@@ -122,7 +127,7 @@ int main() {
          player.Jump = false;
       });
       Moving.each([]( Position &Pos, Velocity &Vel) { // Gravity
-         Vel.Y += 8;
+         Vel.Y += 12;
       }); // Gravity
 
       //Collision // Movement
@@ -218,7 +223,7 @@ int main() {
                }
             }
             else { // One will give the other friction, and stop it on a axis
-               if (HitType == 0) {
+               if (HitType == 0) { // Hit from Y
                   InnerEntity.set<Velocity>({Friction(InnerEntity.get<Velocity>().X,FRICTION),0});
                }
                else if (HitType == 1) {
