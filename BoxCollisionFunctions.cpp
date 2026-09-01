@@ -135,7 +135,7 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
         CollisionData {
             true,
             ClosestTime,
-            GetAngleFromTimes(Xnear,Ynear,Yswap,Xswap)
+            GetAngleFromTimes(Xnear,Ynear,Xswap,Yswap)
         }
     };
 }
