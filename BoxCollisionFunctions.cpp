@@ -5,6 +5,9 @@
 
 #include <cmath>
 #include <concepts>
+#include <iostream>
+#include <ostream>
+
 #include "raylib.h"
 
 using namespace std;
@@ -131,6 +134,7 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
     }
 
     // After this, its more of Checking with Times, and Returning Data Back
+    cout << GetAngleFromTimes(Xnear,Ynear,Xswap,Yswap) << "\n";
     return {
         CollisionData {
             true,
@@ -151,8 +155,8 @@ bool IsEarlier(CollisionData Old,CollisionData New) {
      if (Old.TimeHit > New.TimeHit) {
          return true;
      }
-     else if (Old.TimeHit == New.TimeHit) { // Only could be One Hitting a Corner and One hitting a Side, or some Overlap, inwhichCase it does not matter
-          if (IsCornerHit(Old.AngleHit)) { // If it hit a corner, it does not get Priority at the same time hit;
+     else if (Old.TimeHit == New.TimeHit ) { // Only could be One Hitting a Corner and One hitting a Side, or some Overlap, inwhichCase it does not matter
+          if (IsCornerHit(New.AngleHit)) { // If it hit a corner, it does not get Priority at the same time hit;
               return false;
           }
           else {

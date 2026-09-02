@@ -46,7 +46,7 @@ int main() {
    world MyWorld;
 
    entity MainPlayer = MyWorld.entity();
-   MainPlayer.set<Position>({200,200});
+   MainPlayer.set<Position>({200,-200});
    MainPlayer.set<Velocity>({0,40});
    MainPlayer.set<Box>(Box {Vector2{100,100},&bubbles});
    MainPlayer.add<Player>();
@@ -74,12 +74,16 @@ int main() {
    C.set<Position>({100,400});
    C.set<Box>(Box {Vector2{800,100},&bubbles});
    C.add<Static>();
-
+/*
    entity E = MyWorld.entity();
    E.set<Position>({-100,100});
    E.set<Box>(Box {Vector2{400,100},&bubbles});
    E.add<Static>();
-
+*/
+   entity F = MyWorld.entity();
+   F.set<Position>({800,400});
+   F.set<Box>(Box {Vector2{400,100},&bubbles});
+   F.add<Static>();
 
    // Cam needs to be attached to object
    Camera2D camera;
@@ -146,37 +150,28 @@ int main() {
                      return; //Skip interation, we are testing the same box on itself
                   }
                   else {
-                     Temp = DynamicBoxVsDynamicBox(*VelocityOuter,PositionOuter, BoxOuter,VelocityInner,PositionInner,BoxInner,TimeLeft);
-                     if (IsEarlier(Earliest,Temp)) {
-                        Earliest = Temp;
-                        OuterEntity = E1;
-                        InnerEntity = E2;
-                     }
-                     else {
-                        return; // Is not Earlier, just Continue;
-                     }
+                     Temp = DynamicBoxVsDynamicBox(VelocityInner,PositionInner, BoxInner,*VelocityOuter,PositionOuter,BoxOuter,TimeLeft);
                   }
                }
                else {
                   //Note: we do not check if boxes are the same as its only static Vs dynamic here, so it cant be self v self;
                   Temp = StaticVsDynamicBox(VelocityInner,PositionInner,BoxInner,PositionOuter,BoxOuter,TimeLeft);
-                  if (IsEarlier(Earliest,Temp)) {
-                     Earliest = Temp;
-                     OuterEntity = E1;
-                     InnerEntity = E2;
-                  }
-                  else {
-                     return; // Is not Earlier, just Continue;
-                  }
+               }
+               //Did Collision Math, we now check if its earlier
+               if (IsEarlier(Earliest,Temp)) {
+                        Earliest = Temp;
+                        OuterEntity = E1;
+                        InnerEntity = E2;
                }
             });
          });
          //We got are earliest hit now (supposedly)
          //And we move stuff
          if (Earliest.Collision) {
+            cout << "hit: \n";
             Moving.each([&Earliest](Position &Pos,Velocity &Vel) {
-               Pos.X += (Vel.X * Earliest.TimeHit);
-               Pos.Y += (Vel.Y * Earliest.TimeHit);
+               Pos.X += (Vel.X * (Earliest.TimeHit - 0.000001f)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
+               Pos.Y += (Vel.Y * (Earliest.TimeHit - 0.000001f));
             });
             TimeLeft -= Earliest.TimeHit;
 
@@ -209,7 +204,8 @@ int main() {
                      }
                   );
                }
-               else { //Hit from Cornerd
+               else { //Hit from Corner
+
                   OuterEntity.set<Velocity>( Velocity {
                      (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterEntity.get<Velocity>().X + ((2*Mass2)/(Mass1 + Mass2))*InnerEntity.get<Velocity>().X),
                         (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterEntity.get<Velocity>().Y + ((2*Mass2)/(Mass1 + Mass2))*InnerEntity.get<Velocity>().Y)
@@ -220,6 +216,7 @@ int main() {
                         (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerEntity.get<Velocity>().Y - ((2*Mass1)/(Mass2 + Mass1))*OuterEntity.get<Velocity>().Y)
                      }
                   );
+
                }
             }
             else { // One will give the other friction, and stop it on a axis
@@ -235,6 +232,9 @@ int main() {
             }
             if (Earliest.AngleHit == 90 && InnerEntity.has<Player>()) {
                InnerEntity.set<Player>(Player{true});
+            }
+            else if (Earliest.AngleHit == 270 && OuterEntity.has<Player>()) {
+               OuterEntity.set<Player>(Player{true});
             }
 
          }
@@ -261,7 +261,15 @@ int main() {
       });
       EndMode2D();
       EndDrawing();
-      //cout << "end of frame \n";
+      cout << "end of frame \n";
    }
 
 }
+
+
+
+//DynamicBoxes Test against each other, remove both velocities (or pushes the top one up?) leading to the cube jumping but never having its jump toggled due to "angle relativity"
+// Theory, Dynamic Boxe 1 on ground resolves, its now static, on the next iteration of collision (not next frame), the dynamic box on top (dynamic 3) can hit, dynamic 2 (another one touching the floor) get resolved two, then the top box can hit both
+// I might be wrong though, as it probaly should start thne, losing the 90's as it gains the 225's/270's,
+//
+//
