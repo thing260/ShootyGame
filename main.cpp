@@ -46,30 +46,30 @@ int main() {
    world MyWorld;
 
    entity MainPlayer = MyWorld.entity();
-   MainPlayer.set<Position>({200,-200});
-   MainPlayer.set<Velocity>({0,40});
+   MainPlayer.set<Position>({698,300});
+   MainPlayer.set<Velocity>({100,40});
    MainPlayer.set<Box>(Box {Vector2{100,100},&bubbles});
    MainPlayer.add<Player>();
    MainPlayer.add<Dynamic>();
    MainPlayer.add<CameraFocus>();
-
+/*
    entity A = MyWorld.entity();
    A.set<Position>({350,-300});
    A.set<Velocity>({0,40});
    A.set<Box>(Box {Vector2{100,100},&bubbles});
    A.add<Dynamic>();
-
+*/
    entity B = MyWorld.entity();
    B.set<Position>({0,200});
    B.set<Box>(Box {Vector2{100,200},&bubbles});
    B.add<Static>();
-
+/*
    entity D = MyWorld.entity();
    D.set<Position>({500,-150});
    D.set<Velocity>({0,40});
    D.set<Box>(Box {Vector2{100,100},&bubbles});
    D.add<Dynamic>();
-
+*/
    entity C = MyWorld.entity();
    C.set<Position>({100,400});
    C.set<Box>(Box {Vector2{800,100},&bubbles});
@@ -168,10 +168,10 @@ int main() {
          //We got are earliest hit now (supposedly)
          //And we move stuff
          if (Earliest.Collision) {
-            cout << "hit: \n";
+            cout << "hit info, Angle: " << Earliest.AngleHit << " Time: " << Earliest.TimeHit << "\n";
             Moving.each([&Earliest](Position &Pos,Velocity &Vel) {
-               Pos.X += (Vel.X * (Earliest.TimeHit - 0.000001f)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
-               Pos.Y += (Vel.Y * (Earliest.TimeHit - 0.000001f));
+               Pos.X += (Vel.X * (Earliest.TimeHit)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
+               Pos.Y += (Vel.Y * (Earliest.TimeHit));
             });
             TimeLeft -= Earliest.TimeHit;
 

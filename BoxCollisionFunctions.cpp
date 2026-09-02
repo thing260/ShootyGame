@@ -108,10 +108,11 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
     Xfar = (position.X + box.Size.x - ray.Start.X)/ray.End.X;
     Yfar = (position.Y + box.Size.y - ray.Start.Y)/ray.End.Y;
     // Check For NAN values
-    if (Xnear == NAN) {Xnear = INFINITY;} //Due to the ways the Lines are tested, I believe this works (difference between -inf and inf)
-    if (Ynear == NAN) {Xnear = INFINITY;}
-    if (Xfar == NAN) {Xnear = -INFINITY;}
-    if (Yfar == NAN) {Xnear = -INFINITY;}
+
+    if (isnan(Xnear)) {Xnear = INFINITY;} //Due to the ways the Lines are tested, I believe this works (difference between -inf and inf)
+    if (isnan(Ynear)) {Ynear = INFINITY;}
+    if (isnan(Xfar)) {Xfar = -INFINITY;}
+    if (isnan(Yfar)) {Yfar = -INFINITY;}
 
     // Swap Values incase ray comes from a different angle, also decides Angle
     bool Yswap = false;
@@ -135,6 +136,8 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
 
     // After this, its more of Checking with Times, and Returning Data Back
     cout << GetAngleFromTimes(Xnear,Ynear,Xswap,Yswap) << "\n";
+    cout << ClosestTime << "\n";
+    cout << Xnear << " , " << Ynear << "\n";
     return {
         CollisionData {
             true,
