@@ -135,9 +135,9 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
     }
 
     // After this, its more of Checking with Times, and Returning Data Back
-    cout << GetAngleFromTimes(Xnear,Ynear,Xswap,Yswap) << "\n";
-    cout << ClosestTime << "\n";
-    cout << Xnear << " , " << Ynear << "\n";
+    //cout << GetAngleFromTimes(Xnear,Ynear,Xswap,Yswap) << "\n";
+    //cout << ClosestTime << "\n";
+    //cout << Xnear << " , " << Ynear << "\n";
     return {
         CollisionData {
             true,

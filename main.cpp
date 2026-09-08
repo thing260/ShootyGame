@@ -20,6 +20,7 @@ void RenderBoxRepeat() {
    TODO:
 }
 
+int CurrentFrame = 0;
 
 
 
@@ -30,7 +31,6 @@ void RenderBoxRepeat() {
 
 
 int main() {
-
    float ScreenWidth = 1000;
    float ScreenHeight = 1000;
    SetTargetFPS(60);
@@ -52,27 +52,27 @@ int main() {
    MainPlayer.add<Player>();
    MainPlayer.add<Dynamic>();
    MainPlayer.add<CameraFocus>();
-/*
+
    entity A = MyWorld.entity();
-   A.set<Position>({350,-300});
+   A.set<Position>({300,-300});
    A.set<Velocity>({0,40});
    A.set<Box>(Box {Vector2{100,100},&bubbles});
    A.add<Dynamic>();
-*/
+/*
    entity B = MyWorld.entity();
    B.set<Position>({0,200});
    B.set<Box>(Box {Vector2{100,200},&bubbles});
    B.add<Static>();
-/*
+*/
    entity D = MyWorld.entity();
-   D.set<Position>({500,-150});
+   D.set<Position>({100,-150});
    D.set<Velocity>({0,40});
    D.set<Box>(Box {Vector2{100,100},&bubbles});
    D.add<Dynamic>();
-*/
+
    entity C = MyWorld.entity();
-   C.set<Position>({100,400});
-   C.set<Box>(Box {Vector2{800,100},&bubbles});
+   C.set<Position>({-700,400});
+   C.set<Box>(Box {Vector2{1600,100},&bubbles});
    C.add<Static>();
 /*
    entity E = MyWorld.entity();
@@ -112,7 +112,7 @@ int main() {
 
 
    while (!WindowShouldClose()) {
-
+      CurrentFrame++;
       //Controls / Velocity get set from other things
       if (IsKeyDown(KEY_Z)) {
          camera.zoom += 0.05f;
@@ -168,7 +168,7 @@ int main() {
          //We got are earliest hit now (supposedly)
          //And we move stuff
          if (Earliest.Collision) {
-            cout << "hit info, Angle: " << Earliest.AngleHit << " Time: " << Earliest.TimeHit << "\n";
+            // cout << "hit info, Angle: " << Earliest.AngleHit << " Time: " << Earliest.TimeHit << "\n";
             Moving.each([&Earliest](Position &Pos,Velocity &Vel) {
                Pos.X += (Vel.X * (Earliest.TimeHit)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
                Pos.Y += (Vel.Y * (Earliest.TimeHit));
@@ -180,44 +180,52 @@ int main() {
             if (OuterEntity.has<Velocity>()) { // boxs will counter act each others velocities, and give friction, and Each Have a Mass
                float Mass1 = OuterEntity.get<Box>().Size.x * OuterEntity.get<Box>().Size.y;
                float Mass2 = InnerEntity.get<Box>().Size.x * InnerEntity.get<Box>().Size.y;
+               //Store Velocities so We Modified use Junk Values
+               Velocity InnerVel = InnerEntity.get<Velocity>();
+               Velocity OuterVel = OuterEntity.get<Velocity>();
                if (HitType == 1) { //Hit from X
                   OuterEntity.set<Velocity>( Velocity {
-                     (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterEntity.get<Velocity>().X + ((2*Mass2)/(Mass1 + Mass2))*InnerEntity.get<Velocity>().X)/2,
-                        Friction(OuterEntity.get<Velocity>().Y,FRICTION)
+                     (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterVel.X + ((2*Mass2)/(Mass1 + Mass2))*InnerVel.X)/2,
+                        Friction(OuterVel.Y,FRICTION)
                      }
                   );
                   InnerEntity.set<Velocity>( Velocity {
-                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerEntity.get<Velocity>().X - ((2*Mass1)/(Mass2 + Mass1))*OuterEntity.get<Velocity>().X)/2,
-                        Friction(InnerEntity.get<Velocity>().Y,FRICTION)
+                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.X - ((2*Mass1)/(Mass2 + Mass1))*OuterVel.X)/2,
+                        Friction(InnerVel.Y,FRICTION)
                      }
                   );
+
                }
                else if (HitType == 0) { //Hit From Y
                   OuterEntity.set<Velocity>( Velocity {
-                     Friction(OuterEntity.get<Velocity>().X,FRICTION),
-                     (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterEntity.get<Velocity>().Y + ((2*Mass2)/(Mass1 + Mass2))*InnerEntity.get<Velocity>().Y)/2
+                     Friction(OuterVel.X,FRICTION),
+                     (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterVel.Y + ((2*Mass2)/(Mass1 + Mass2))*InnerVel.Y)/2
                      }
                   );
                   InnerEntity.set<Velocity>( Velocity {
-                     Friction(InnerEntity.get<Velocity>().X,FRICTION),
-                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerEntity.get<Velocity>().Y - ((2*Mass1)/(Mass2 + Mass1))*OuterEntity.get<Velocity>().Y)/2
+                     Friction(InnerVel.X,FRICTION),
+                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.Y - ((2*Mass1)/(Mass2 + Mass1))*OuterVel.Y)/2
                      }
                   );
                }
+
                else { //Hit from Corner
 
                   OuterEntity.set<Velocity>( Velocity {
-                     (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterEntity.get<Velocity>().X + ((2*Mass2)/(Mass1 + Mass2))*InnerEntity.get<Velocity>().X),
-                        (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterEntity.get<Velocity>().Y + ((2*Mass2)/(Mass1 + Mass2))*InnerEntity.get<Velocity>().Y)
+                     (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterVel.X + ((2*Mass2)/(Mass1 + Mass2))*InnerVel.X),
+                        (((Mass1 - Mass2)/(Mass1 + Mass2)) * OuterVel.Y + ((2*Mass2)/(Mass1 + Mass2))*InnerVel.Y)
                      }
                   );
                   InnerEntity.set<Velocity>( Velocity {
-                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerEntity.get<Velocity>().X - ((2*Mass1)/(Mass2 + Mass1))*OuterEntity.get<Velocity>().X),
-                        (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerEntity.get<Velocity>().Y - ((2*Mass1)/(Mass2 + Mass1))*OuterEntity.get<Velocity>().Y)
+                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.X - ((2*Mass1)/(Mass2 + Mass1))*OuterVel.X),
+                        (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.Y - ((2*Mass1)/(Mass2 + Mass1))*OuterVel.Y)
                      }
                   );
 
                }
+               cout << "OuterVelocity: " << OuterEntity.get<Velocity>().X << "," << OuterEntity.get<Velocity>().Y << "\n";
+               cout << "InnerVelocity: " << InnerEntity.get<Velocity>().X << "," << InnerEntity.get<Velocity>().Y << "\n";
+               cout << " : CurrentFrame: " << CurrentFrame << "\n"; ;
             }
             else { // One will give the other friction, and stop it on a axis
                if (HitType == 0) { // Hit from Y
@@ -261,7 +269,7 @@ int main() {
       });
       EndMode2D();
       EndDrawing();
-      cout << "end of frame \n";
+      //cout << "end of frame \n";
    }
 
 }
