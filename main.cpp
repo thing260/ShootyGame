@@ -72,7 +72,7 @@ int main() {
 
    entity C = MyWorld.entity();
    C.set<Position>({-700,400});
-   C.set<Box>(Box {Vector2{1600,100},&bubbles});
+   C.set<Box>(Box {Vector2{6000,100},&bubbles});
    C.add<Static>();
 /*
    entity E = MyWorld.entity();
@@ -170,8 +170,8 @@ int main() {
          if (Earliest.Collision) {
             // cout << "hit info, Angle: " << Earliest.AngleHit << " Time: " << Earliest.TimeHit << "\n";
             Moving.each([&Earliest](Position &Pos,Velocity &Vel) {
-               Pos.X += (Vel.X * (Earliest.TimeHit)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
-               Pos.Y += (Vel.Y * (Earliest.TimeHit));
+               Pos.X += (Vel.X * (Earliest.TimeHit - 0.00001)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
+               Pos.Y += (Vel.Y * (Earliest.TimeHit - 0.00001));
             });
             TimeLeft -= Earliest.TimeHit;
 
