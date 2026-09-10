@@ -32,17 +32,17 @@ struct Player { //This Object is Controlled By the Player, Used to be a Tag, now
 
 
 //Tags
-struct Dynamic { //This Object is Moving and Processed in Collision as such
-};
 struct Static { //This Object is Not Moving and Processed in Collision as such
 };
 struct CameraFocus { //This Object is the Focus Of the Camera (Only one allowed or weird shit happens)
 };
 struct Phantom { //Has Collision, but does not RespondBack, EI, only used to trigger events
 };
-
 //Other/Helper
 
+struct Dynamic { //This Object is Moving and Processed in Collision as such
+    bool Checked = false;
+};
 struct CollisionData {
     bool Collision;
     float TimeHit;

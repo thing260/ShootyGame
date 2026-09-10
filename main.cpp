@@ -45,6 +45,9 @@ int main() {
 
    world MyWorld;
 
+
+
+
    entity MainPlayer = MyWorld.entity();
    MainPlayer.set<Position>({698,300});
    MainPlayer.set<Velocity>({100,40});
@@ -54,7 +57,7 @@ int main() {
    MainPlayer.add<CameraFocus>();
 
    entity A = MyWorld.entity();
-   A.set<Position>({300,-300});
+   A.set<Position>({400,-300});
    A.set<Velocity>({0,40});
    A.set<Box>(Box {Vector2{100,100},&bubbles});
    A.add<Dynamic>();
@@ -98,6 +101,7 @@ int main() {
    flecs::query<Position,Static,Box> StaticBoxs = MyWorld.query<Position,Static,Box>();
    flecs::query<Velocity,Position,Dynamic,Box> DynamicBoxs = MyWorld.query<Velocity,Position,Dynamic,Box>();
    flecs::query<Position,Box,CameraFocus> CamerasFocus = MyWorld.query<Position,Box,CameraFocus>();
+   flecs::query<Dynamic> DynamicObjects = MyWorld.query<Dynamic>();
    flecs::query<Player> Players = MyWorld.query<Player>();
 
    flecs::query<Velocity*,Position,Box,Dynamic*,Static*> StaticAndDynamicBoxs = MyWorld.query_builder<Velocity*,Position,Box,Dynamic*,Static*>()
@@ -112,6 +116,7 @@ int main() {
 
 
    while (!WindowShouldClose()) {
+      cout << "new frame\n";
       CurrentFrame++;
       //Controls / Velocity get set from other things
       if (IsKeyDown(KEY_Z)) {
@@ -137,16 +142,20 @@ int main() {
       //Collision // Movement
       float TimeLeft = DELTATIME;
       while (TimeLeft > 0) {
+         DynamicObjects.each([](Dynamic &dynamic) {
+            dynamic.Checked = false; // This is Not working
+            //throw("This is not finished, I must work on it");
+         });
          CollisionData Earliest {false,INFINITY,-1};
          CollisionData Temp {false,INFINITY,-1};
          entity OuterEntity; //entities that hit
          entity InnerEntity; //entities that hit
 
-         //Sorry for the Amount of captures, it all necessary
-         StaticAndDynamicBoxs.each([DynamicBoxs,&Temp,&Earliest,&OuterEntity,&InnerEntity,&TimeLeft](flecs::entity E1,Velocity *VelocityOuter, Position &PositionOuter, Box &BoxOuter,Dynamic*,Static*) {
-            DynamicBoxs.each([&VelocityOuter,&PositionOuter,&BoxOuter,&E1,&Temp,&Earliest,&OuterEntity,&InnerEntity,&TimeLeft](flecs::entity E2,Velocity &VelocityInner, Position &PositionInner, Dynamic DynamicInner, Box &BoxInner) {
+         //Sorry for the Amount of captures, its all necessary
+         StaticAndDynamicBoxs.each([DynamicBoxs,&Temp,&Earliest,&OuterEntity,&InnerEntity,&TimeLeft](flecs::entity E1,Velocity *VelocityOuter, Position &PositionOuter, Box &BoxOuter,Dynamic* dynamic,Static*) {
+            DynamicBoxs.each([&VelocityOuter,&PositionOuter,&BoxOuter,&E1,&Temp,&Earliest,&OuterEntity,&InnerEntity,&TimeLeft,&dynamic](flecs::entity E2,Velocity &VelocityInner, Position &PositionInner, Dynamic DynamicInner, Box &BoxInner) {
                if (VelocityOuter != nullptr) { //If our outer has velocity
-                  if (E1 == E2) {
+                  if (E1 == E2 || DynamicInner.Checked == true) {
                      return; //Skip interation, we are testing the same box on itself
                   }
                   else {
@@ -164,7 +173,12 @@ int main() {
                         InnerEntity = E2;
                }
             });
+            if (dynamic) {
+               cout << "a\n";
+               dynamic->Checked = true;
+            }
          });
+
          //We got are earliest hit now (supposedly)
          //And we move stuff
          if (Earliest.Collision) {
