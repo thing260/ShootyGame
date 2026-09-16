@@ -116,7 +116,7 @@ int main() {
 
 
    while (!WindowShouldClose()) {
-      cout << "new frame\n";
+      //cout << "new frame\n";
       CurrentFrame++;
       //Controls / Velocity get set from other things
       if (IsKeyDown(KEY_Z)) {
@@ -130,7 +130,7 @@ int main() {
          if (IsKeyDown(KEY_UP)) {velocity.Y -= 4;}
          if (IsKeyDown(KEY_DOWN)) {velocity.Y += 4;}
          if (IsKeyDown(KEY_RIGHT)) {velocity.X += 16;}
-         if (player.Jump == true && IsKeyDown(KEY_SPACE)) {velocity.Y -= 400;}
+         if (player.Jump == true && IsKeyDown(KEY_SPACE)) {velocity.Y -= 500;}
       }); //Controls
       Players.each([](Player &player) {
          player.Jump = false;
@@ -174,7 +174,7 @@ int main() {
                }
             });
             if (dynamic) {
-               cout << "a\n";
+               //cout << "a\n";
                dynamic->Checked = true;
             }
          });
@@ -203,12 +203,15 @@ int main() {
                         Friction(OuterVel.Y,FRICTION)
                      }
                   );
+
                   InnerEntity.set<Velocity>( Velocity {
-                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.X - ((2*Mass1)/(Mass2 + Mass1))*OuterVel.X)/2,
+                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.X + ((2*Mass1)/(Mass2 + Mass1))*OuterVel.X)/2,
                         Friction(InnerVel.Y,FRICTION)
                      }
                   );
-
+                  cout << "OuterVelocity: " << OuterEntity.get<Velocity>().X << "," << OuterEntity.get<Velocity>().Y << "\n";
+                  cout << "InnerVelocity: " << InnerEntity.get<Velocity>().X << "," << InnerEntity.get<Velocity>().Y << "\n";
+                  cout << " : CurrentFrame: " << CurrentFrame << "\n"; ;
                }
                else if (HitType == 0) { //Hit From Y
                   OuterEntity.set<Velocity>( Velocity {
@@ -218,7 +221,7 @@ int main() {
                   );
                   InnerEntity.set<Velocity>( Velocity {
                      Friction(InnerVel.X,FRICTION),
-                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.Y - ((2*Mass1)/(Mass2 + Mass1))*OuterVel.Y)/2
+                     (((Mass2 - Mass1)/(Mass2 + Mass1)) * InnerVel.Y + ((2*Mass1)/(Mass2 + Mass1))*OuterVel.Y)/2
                      }
                   );
                }
@@ -237,6 +240,7 @@ int main() {
                   );
 
                }
+               cout << " -------\n";
                cout << "OuterVelocity: " << OuterEntity.get<Velocity>().X << "," << OuterEntity.get<Velocity>().Y << "\n";
                cout << "InnerVelocity: " << InnerEntity.get<Velocity>().X << "," << InnerEntity.get<Velocity>().Y << "\n";
                cout << " : CurrentFrame: " << CurrentFrame << "\n"; ;

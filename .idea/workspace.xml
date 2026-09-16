@@ -34,7 +34,6 @@
   <component name="ChangeListManager">
     <list default="true" id="942c173d-89fc-47c8-9ffc-408c3e27b42a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ComponentDeclarations.h" beforeDir="false" afterPath="$PROJECT_DIR$/ComponentDeclarations.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FlecTest.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/FlecTest.dir/main.cpp.o" afterDir="false" />
@@ -162,7 +161,7 @@
       <workItem from="1788452293572" duration="3309000" />
       <workItem from="1788815160105" duration="6875000" />
       <workItem from="1788959640938" duration="5168000" />
-      <workItem from="1789068399046" duration="450000" />
+      <workItem from="1789068399046" duration="2411000" />
     </task>
     <servers />
   </component>
@@ -185,7 +184,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>158</line>
+          <line>159</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
