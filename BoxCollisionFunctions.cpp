@@ -93,8 +93,8 @@ CollisionData StaticVsDynamicBox(Velocity velocity, Position PositionDynamic, Bo
 
     //RenderBoxTest(Position {PositionStatic.X - (DynamicBox.Size.x/2),PositionStatic.Y - (DynamicBox.Size.y/2)},Box {Vector2 {DynamicBox.Size.x + StaticBox.Size.x, DynamicBox.Size.y + StaticBox.Size.y}});
     return WhenDoesRayHitBox(
-        RayRay {Position {PositionDynamic.X + (DynamicBox.Size.x/2),PositionDynamic.Y + (DynamicBox.Size.y/2)}, velocity},
-        Position {PositionStatic.X - (DynamicBox.Size.x/2),PositionStatic.Y - (DynamicBox.Size.y/2)},
+        RayRay {Position {PositionDynamic.x + (DynamicBox.Size.x/2),PositionDynamic.y + (DynamicBox.Size.y/2)}, velocity},
+        Position {PositionStatic.x - (DynamicBox.Size.x/2),PositionStatic.y - (DynamicBox.Size.y/2)},
         Box {Vector2 {DynamicBox.Size.x + StaticBox.Size.x, DynamicBox.Size.y + StaticBox.Size.y}, nullptr},
         TimeToHit
     );
@@ -103,10 +103,10 @@ CollisionData StaticVsDynamicBox(Velocity velocity, Position PositionDynamic, Bo
 CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float TimeToHit) {
     // Get Times Hit
     float Xnear, Ynear, Xfar, Yfar;
-    Xnear = (position.X - ray.Start.X)/ray.End.X;
-    Ynear = (position.Y - ray.Start.Y)/ray.End.Y;
-    Xfar = (position.X + box.Size.x - ray.Start.X)/ray.End.X;
-    Yfar = (position.Y + box.Size.y - ray.Start.Y)/ray.End.Y;
+    Xnear = (position.x - ray.Start.x)/ray.End.X;
+    Ynear = (position.y - ray.Start.y)/ray.End.Y;
+    Xfar = (position.x + box.Size.x - ray.Start.x)/ray.End.X;
+    Yfar = (position.y + box.Size.y - ray.Start.y)/ray.End.Y;
     // Check For NAN values
 
     if (isnan(Xnear)) {Xnear = INFINITY;} //Due to the ways the Lines are tested, I believe this works (difference between -inf and inf)
@@ -148,8 +148,8 @@ CollisionData WhenDoesRayHitBox(RayRay ray,Position position,Box box, float Time
 }
 CollisionData DynamicBoxVsDynamicBox(Velocity velocity, Position position, Box DynamicBox, Velocity velocity2, Position position2, Box DynamicBox2,float TimeToHit) { // TODO:
     return WhenDoesRayHitBox(
-        RayRay {Position {position.X + (DynamicBox.Size.x/2),position.Y + (DynamicBox.Size.y/2)}, Velocity {velocity.X - velocity2.X,velocity.Y - velocity2.Y}},
-        Position {position2.X - (DynamicBox.Size.x/2),position2.Y - (DynamicBox.Size.y/2)},
+        RayRay {Position {position.x + (DynamicBox.Size.x/2),position.y + (DynamicBox.Size.y/2)}, Velocity {velocity.X - velocity2.X,velocity.Y - velocity2.Y}},
+        Position {position2.x - (DynamicBox.Size.x/2),position2.y - (DynamicBox.Size.y/2)},
         Box {Vector2 {DynamicBox.Size.x + DynamicBox2.Size.x, DynamicBox.Size.y + DynamicBox2.Size.y}, nullptr},
         TimeToHit
     );

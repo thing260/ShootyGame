@@ -10,10 +10,13 @@ struct Health {
     float HP;
 };
 struct Position {
+    float x;
+    float y;
+};
+struct RenderRepeatTile {
     float X;
     float Y;
 };
-
 struct Velocity {
     float X;
     float Y;

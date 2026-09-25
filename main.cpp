@@ -14,11 +14,41 @@ using namespace flecs;
 
 // functions
 void RenderOneBox(Position position,Box box) {
-   DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height}, Rectangle {position.X,position.Y,box.Size.x,box.Size.y},Vector2 {0,0},0,WHITE);
+   DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height}, Rectangle {position.x,position.y,box.Size.x,box.Size.y},Vector2 {0,0},0,WHITE);
 }
-void RenderBoxRepeat() {
-   TODO:
+void DrawBoxRepeatSingle(Box &box,Position &position,Vector2 &Tile, int X, int Y, float DTTR, float DTTD) {
+   DTTR -= X;
+   DTTD -= Y;
+
+   if (DTTR < 1.0) {
+      if (DTTD < 1.0) {
+         DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width * DTTR,(float)box.Texture->height * DTTD}, Rectangle {position.x + (Tile.x * X),position.y + (Tile.y * Y),Tile.x * DTTR,Tile.y * DTTD},Vector2 {0,0},0,WHITE);
+      }
+      else {
+         DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width * DTTR,(float)box.Texture->height}, Rectangle {position.x + (Tile.x * X),position.y + (Tile.y * Y),Tile.x * DTTR,Tile.y},Vector2 {0,0},0,WHITE);
+      }
+   }
+   else {
+      if (DTTD < 1.0) {
+         DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height * DTTD}, Rectangle {position.x + (Tile.x * X),position.y + (Tile.y * Y),Tile.x,Tile.y * DTTD},Vector2 {0,0},0,WHITE);
+      }
+      else { // Draw regularly
+         DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height}, Rectangle {position.x + (Tile.x * X),position.y + (Tile.y * Y),Tile.x,Tile.y},Vector2 {0,0},0,WHITE);
+      }
+   }
+
 }
+void RenderBoxRepeat(Box &box,Position &position,Vector2 Tile) {
+   float DTTR = box.Size.x/Tile.x; //Amount of times its drawing right, floating point is left over and makes part draw last draw
+   float DTTD = box.Size.y/Tile.y;
+   for (int X = 0; X < DTTR; X++) {
+      for (int Y = 0; Y < DTTD; Y++) {
+         DrawBoxRepeatSingle(box,position,Tile,X,Y,DTTR,DTTD);
+      }
+   }
+   //DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height}, Rectangle {position.X,position.Y,box.Size.x,box.Size.y},Vector2 {0,0},0,WHITE);
+}
+
 
 int CurrentFrame = 0;
 
@@ -184,8 +214,8 @@ int main() {
          if (Earliest.Collision) {
             // cout << "hit info, Angle: " << Earliest.AngleHit << " Time: " << Earliest.TimeHit << "\n";
             Moving.each([&Earliest](Position &Pos,Velocity &Vel) {
-               Pos.X += (Vel.X * (Earliest.TimeHit - 0.00001)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
-               Pos.Y += (Vel.Y * (Earliest.TimeHit - 0.00001));
+               Pos.x += (Vel.X * (Earliest.TimeHit - 0.00001)); // The Tiny Value added gives them a Lil room so they dont clip each other due to floating point persicion
+               Pos.y += (Vel.Y * (Earliest.TimeHit - 0.00001));
             });
             TimeLeft -= Earliest.TimeHit;
 
@@ -266,8 +296,8 @@ int main() {
          }
          else {
             Moving.each([TimeLeft](Position &Pos,Velocity &Vel) {
-               Pos.X += (Vel.X * TimeLeft);
-               Pos.Y += (Vel.Y * TimeLeft);
+               Pos.x += (Vel.X * TimeLeft);
+               Pos.y += (Vel.Y * TimeLeft);
             });
             TimeLeft = 0;
          }
@@ -275,7 +305,7 @@ int main() {
 
 
       CamerasFocus.each([&camera](Position &position, Box &box,CameraFocus Cam) {
-         camera.target = Vector2 {position.X + (box.Size.x/2),position.Y + (box.Size.y/2)};
+         camera.target = Vector2 {position.x + (box.Size.x/2),position.y + (box.Size.y/2)};
       });
       BeginDrawing();
       BeginMode2D(camera);
@@ -283,7 +313,7 @@ int main() {
 
 
       Rendering.each([](Position &position, Box &box) {
-         RenderOneBox(position,box);
+          RenderOneBox(position,box);
       });
       EndMode2D();
       EndDrawing();
