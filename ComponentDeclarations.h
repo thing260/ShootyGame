@@ -14,8 +14,8 @@ struct Position {
     float y;
 };
 struct RenderRepeatTile {
-    float X;
-    float Y;
+    float x;
+    float y;
 };
 struct Velocity {
     float X;

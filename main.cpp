@@ -16,7 +16,7 @@ using namespace flecs;
 void RenderOneBox(Position position,Box box) {
    DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height}, Rectangle {position.x,position.y,box.Size.x,box.Size.y},Vector2 {0,0},0,WHITE);
 }
-void DrawBoxRepeatSingle(Box &box,Position &position,Vector2 &Tile, int X, int Y, float DTTR, float DTTD) {
+void DrawBoxRepeatSingle(Box &box,Position &position,RenderRepeatTile &Tile, int X, int Y, float DTTR, float DTTD) {
    DTTR -= X;
    DTTD -= Y;
 
@@ -38,7 +38,7 @@ void DrawBoxRepeatSingle(Box &box,Position &position,Vector2 &Tile, int X, int Y
    }
 
 }
-void RenderBoxRepeat(Box &box,Position &position,Vector2 Tile) {
+void RenderBoxRepeat(Box &box,Position &position,RenderRepeatTile Tile) {
    float DTTR = box.Size.x/Tile.x; //Amount of times its drawing right, floating point is left over and makes part draw last draw
    float DTTD = box.Size.y/Tile.y;
    for (int X = 0; X < DTTR; X++) {
@@ -49,11 +49,7 @@ void RenderBoxRepeat(Box &box,Position &position,Vector2 Tile) {
    //DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height}, Rectangle {position.X,position.Y,box.Size.x,box.Size.y},Vector2 {0,0},0,WHITE);
 }
 
-
 int CurrentFrame = 0;
-
-
-
 
 
 
@@ -101,12 +97,15 @@ int main() {
    D.set<Position>({100,-150});
    D.set<Velocity>({0,40});
    D.set<Box>(Box {Vector2{100,100},&bubbles});
+   D.set<RenderRepeatTile>(RenderRepeatTile {25,25});
    D.add<Dynamic>();
 
    entity C = MyWorld.entity();
    C.set<Position>({-700,400});
    C.set<Box>(Box {Vector2{6000,100},&bubbles});
+   C.set<RenderRepeatTile>(RenderRepeatTile {25,25});
    C.add<Static>();
+
 /*
    entity E = MyWorld.entity();
    E.set<Position>({-100,100});
@@ -125,7 +124,7 @@ int main() {
    camera.offset = Vector2 {ScreenWidth/2,ScreenHeight/2};
 
    //Queries
-   flecs::query<Position,Box> Rendering = MyWorld.query<Position,Box>();
+   flecs::query<Position,Box,RenderRepeatTile*> Rendering = MyWorld.query<Position,Box,RenderRepeatTile*>();
    flecs::query<Position,Velocity> Moving= MyWorld.query<Position,Velocity>();
    flecs::query<Velocity,Player> Controlling = MyWorld.query<Velocity,Player>();
    flecs::query<Position,Static,Box> StaticBoxs = MyWorld.query<Position,Static,Box>();
@@ -312,8 +311,14 @@ int main() {
       ClearBackground(RAYWHITE);
 
 
-      Rendering.each([](Position &position, Box &box) {
-          RenderOneBox(position,box);
+      Rendering.each([](Position &position, Box &box, RenderRepeatTile *tile) {
+          if (tile) {
+             RenderBoxRepeat(box,position,*tile);
+          }
+          else {
+            RenderOneBox(position,box);
+          }
+
       });
       EndMode2D();
       EndDrawing();
