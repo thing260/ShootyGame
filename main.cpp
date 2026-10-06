@@ -48,12 +48,12 @@ void RenderBoxRepeat(Box &box,Position &position,RenderRepeatTile Tile) {
    }
    //DrawTexturePro(*box.Texture,Rectangle {0,0,(float)box.Texture->width,(float)box.Texture->height}, Rectangle {position.X,position.Y,box.Size.x,box.Size.y},Vector2 {0,0},0,WHITE);
 }
+// We what an EventFunction That Takes Back Two Entities that have hit each other, and base on their components acts on both
 
 int CurrentFrame = 0;
 
 
 
-// We just want to have some Boxs Effected by Velocity and Rendered
 
 
 int main() {
@@ -61,7 +61,6 @@ int main() {
    float ScreenHeight = 1000;
    SetTargetFPS(60);
    InitWindow(static_cast<int>(ScreenWidth),static_cast<int>(ScreenHeight),"ECS asdasdasdasd");
-
 
    cout << filesystem::current_path();
    Texture2D bubbles = LoadTexture("../Random/Tests/BubblesTest.png");
@@ -87,12 +86,7 @@ int main() {
    A.set<Velocity>({0,40});
    A.set<Box>(Box {Vector2{100,100},&bubbles});
    A.add<Dynamic>();
-/*
-   entity B = MyWorld.entity();
-   B.set<Position>({0,200});
-   B.set<Box>(Box {Vector2{100,200},&bubbles});
-   B.add<Static>();
-*/
+
    entity D = MyWorld.entity();
    D.set<Position>({100,-150});
    D.set<Velocity>({0,40});
@@ -106,12 +100,6 @@ int main() {
    C.set<RenderRepeatTile>(RenderRepeatTile {25,25});
    C.add<Static>();
 
-/*
-   entity E = MyWorld.entity();
-   E.set<Position>({-100,100});
-   E.set<Box>(Box {Vector2{400,100},&bubbles});
-   E.add<Static>();
-*/
    entity F = MyWorld.entity();
    F.set<Position>({800,400});
    F.set<Box>(Box {Vector2{400,100},&bubbles});
@@ -254,7 +242,6 @@ int main() {
                      }
                   );
                }
-
                else { //Hit from Corner
 
                   OuterEntity.set<Velocity>( Velocity {
@@ -269,10 +256,6 @@ int main() {
                   );
 
                }
-               cout << " -------\n";
-               cout << "OuterVelocity: " << OuterEntity.get<Velocity>().X << "," << OuterEntity.get<Velocity>().Y << "\n";
-               cout << "InnerVelocity: " << InnerEntity.get<Velocity>().X << "," << InnerEntity.get<Velocity>().Y << "\n";
-               cout << " : CurrentFrame: " << CurrentFrame << "\n"; ;
             }
             else { // One will give the other friction, and stop it on a axis
                if (HitType == 0) { // Hit from Y
